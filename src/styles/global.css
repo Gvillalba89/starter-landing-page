@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+@keyframes whatsapp-pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgb(37 211 102 / 0.55);
+	}
+	70% {
+		box-shadow: 0 0 0 14px rgb(37 211 102 / 0);
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgb(37 211 102 / 0);
+	}
+}
+
+.whatsapp-btn {
+	animation: whatsapp-pulse 2.2s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.whatsapp-btn {
+		animation: none;
+	}
+}
