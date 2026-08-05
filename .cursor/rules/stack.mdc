@@ -1,5 +1,5 @@
 ---
-description: Stack y convenciones de mi-landing (Astro, Tailwind, TypeScript)
+description: Stack y convenciones del starter mi-landing (Astro, Tailwind, TypeScript)
 alwaysApply: true
 ---
 
@@ -8,6 +8,17 @@ alwaysApply: true
 - Astro 7 + TypeScript estricto + Tailwind CSS 4 (`@tailwindcss/vite`)
 - Estilos globales en `src/styles/global.css` (`@import "tailwindcss"`)
 - Sin frameworks UI extra salvo que se pida explícitamente
+- Ver también `.cursorrules` en la raíz (misma intención, formato legacy)
+
+# Estructura
+
+```
+src/config/siteConfig.ts
+src/components/sections/
+src/layouts/BaseLayout.astro
+src/pages/
+src/styles/global.css
+```
 
 # Datos desacoplados
 
@@ -17,18 +28,12 @@ alwaysApply: true
 
 # Componentes
 
-- Preferir `.astro` en `src/components/`
-- Una responsabilidad por componente/sección
-- Importar `siteConfig` y tipar con `SiteConfig` cuando haga falta
-- Clases con utilidades Tailwind; evitar CSS ad-hoc salvo casos puntuales
-
-# Páginas
-
-- Rutas en `src/pages/`
-- Importar `../styles/global.css` (o la ruta relativa correcta) en el layout/página raíz
-- Usar `siteConfig.lang`, `name`, `description` en `<html>` / `<head>`
+- Secciones en `src/components/sections/*.astro`
+- Layouts en `src/layouts/`; páginas no repiten `<html>`/`<head>`
+- Preferir utilidades Tailwind; evitar CSS ad-hoc salvo casos puntuales
 
 # Dev server
 
+- Node vía NVM (`.nvmrc` → LTS); `nvm use`
 - Preferir `astro dev --background` y gestionar con `astro dev stop|status|logs`
 - Alternativa: `npm run dev` → http://localhost:4321

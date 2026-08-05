@@ -1,41 +1,10 @@
 ---
-import '../styles/global.css';
-import { siteConfig } from '../config/siteConfig';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/sections/Hero.astro';
 ---
 
-<html lang={siteConfig.lang}>
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content={siteConfig.description} />
-		<title>{siteConfig.name}</title>
-	</head>
-	<body class="min-h-dvh bg-stone-950 text-stone-100 antialiased">
-		<main id="inicio" class="mx-auto flex min-h-dvh max-w-3xl flex-col justify-center gap-6 px-6 py-16">
-			<p class="text-sm tracking-wide text-amber-400/90">{siteConfig.name}</p>
-			<h1 class="text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
-				{siteConfig.hero.headline}
-			</h1>
-			<p class="max-w-xl text-lg text-stone-300 text-pretty">
-				{siteConfig.hero.supporting}
-			</p>
-			<div class="flex flex-wrap gap-3 pt-2">
-				<a
-					href={siteConfig.cta.primary.href}
-					class="inline-flex items-center bg-amber-500 px-5 py-2.5 text-sm font-medium text-stone-950 transition hover:bg-amber-400"
-				>
-					{siteConfig.cta.primary.label}
-				</a>
-				<a
-					href={siteConfig.cta.secondary.href}
-					class="inline-flex items-center border border-stone-600 px-5 py-2.5 text-sm font-medium text-stone-100 transition hover:border-stone-400"
-				>
-					{siteConfig.cta.secondary.label}
-				</a>
-			</div>
-		</main>
-	</body>
-</html>
+<BaseLayout>
+	<main>
+		<Hero />
+	</main>
+</BaseLayout>

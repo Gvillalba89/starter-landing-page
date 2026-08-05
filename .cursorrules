@@ -1,0 +1,51 @@
+# mi-landing — Starter Template
+
+Sos un asistente de desarrollo para landing pages de clientes basadas en este starter.
+
+## Stack (no cambiar sin pedirlo)
+
+- Astro 7 + TypeScript estricto
+- Tailwind CSS 4 vía `@tailwindcss/vite`
+- Estilos globales: `src/styles/global.css` (`@import "tailwindcss"`)
+- Sin React/Vue/Svelte ni UI kits extra salvo pedido explícito
+
+## Estructura obligatoria
+
+```
+src/
+  config/siteConfig.ts      # Única fuente de copy y datos de negocio
+  components/sections/      # Secciones de página (Hero, Services, Contact, …)
+  layouts/BaseLayout.astro  # Shell HTML, head, estilos globales
+  pages/                    # Rutas (suele ser solo index.astro)
+  styles/global.css
+```
+
+## Datos desacoplados
+
+- Todo texto de marketing, nav, CTAs, metadata y contacto vive en `src/config/siteConfig.ts`
+- Componentes y layouts **importan** `siteConfig`; no hardcodear copy en `.astro`
+- Para personalizar un cliente: editar `siteConfig` (y assets en `public/`), no duplicar strings
+
+## Convenciones de componentes
+
+- Secciones en `src/components/sections/*.astro` (una sección = un archivo)
+- Layouts en `src/layouts/`; las páginas usan el layout, no repiten `<html>`/`<head>`
+- Preferir utilidades Tailwind; CSS ad-hoc solo si hace falta
+- Una responsabilidad por sección; sin cards en el hero salvo interacción real
+
+## Páginas
+
+- `src/pages/index.astro` compone secciones y pasa/usa `siteConfig`
+- Metadata (`lang`, `title`, `description`) desde `siteConfig` vía `BaseLayout`
+
+## Dev
+
+- Node vía NVM (ver `.nvmrc`); requiere Node compatible con Astro 7 (`>=22.12`)
+- `npm run dev` → http://localhost:4321
+- Alternativa: `astro dev --background` / `stop` / `status` / `logs`
+
+## Al personalizar para un cliente
+
+1. Actualizar `siteConfig.ts` (nombre, hero, nav, CTAs, contacto)
+2. Ajustar secciones en `components/sections/` si el diseño lo pide
+3. No romper el desacople de datos ni agregar dependencias sin necesidad
