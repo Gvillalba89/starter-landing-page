@@ -1,0 +1,34 @@
+---
+description: Stack y convenciones de mi-landing (Astro, Tailwind, TypeScript)
+alwaysApply: true
+---
+
+# Stack
+
+- Astro 7 + TypeScript estricto + Tailwind CSS 4 (`@tailwindcss/vite`)
+- Estilos globales en `src/styles/global.css` (`@import "tailwindcss"`)
+- Sin frameworks UI extra salvo que se pida explícitamente
+
+# Datos desacoplados
+
+- Todo copy, CTAs, nav, metadata y datos de negocio viven en `src/config/siteConfig.ts`
+- Componentes y páginas **importan** desde `siteConfig`; no hardcodear textos de marketing
+- Para cambiar contenido del sitio, editar `siteConfig` (no duplicar strings en varios `.astro`)
+
+# Componentes
+
+- Preferir `.astro` en `src/components/`
+- Una responsabilidad por componente/sección
+- Importar `siteConfig` y tipar con `SiteConfig` cuando haga falta
+- Clases con utilidades Tailwind; evitar CSS ad-hoc salvo casos puntuales
+
+# Páginas
+
+- Rutas en `src/pages/`
+- Importar `../styles/global.css` (o la ruta relativa correcta) en el layout/página raíz
+- Usar `siteConfig.lang`, `name`, `description` en `<html>` / `<head>`
+
+# Dev server
+
+- Preferir `astro dev --background` y gestionar con `astro dev stop|status|logs`
+- Alternativa: `npm run dev` → http://localhost:4321
