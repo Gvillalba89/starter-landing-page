@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: 'GV Web & Cloud',
-  tagline: 'Landing pages ultra rápidas y sitios web con foco en conversión.',
+  tagline: 'Página de destino o landing page, ultra rápidas y sitios web con foco en conversión.',
   description:
     'Transformo la presencia digital de tu negocio con landing pages modernas, construidas en Astro + Tailwind CSS. Carga instantánea, máxima conversión y cero costos ocultos de mantenimiento.',
   lang: 'es',
