@@ -25,7 +25,7 @@ export const siteConfig = {
     { label: 'Contacto', href: '#contacto' },
   ],
   hero: {
-    headline: 'Desarrollo de landing pages ultrarrápidas y sitios web',
+    headline: 'Desarrollo de landing pages ultra rápidas y sitios web',
     supporting:
       'Presencia digital moderna con Astro + Tailwind: carga instantánea, máxima conversión y mantenimiento simple.',
   },
@@ -72,7 +72,7 @@ export const siteConfig = {
     },
   },
   whatsapp: {
-    phone: '5493410000000',
+    phone: '549341753083',
     message: 'Hola! Quisiera realizar una consulta sobre sus servicios.',
     label: 'Escribinos por WhatsApp',
   },
