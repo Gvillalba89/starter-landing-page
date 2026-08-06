@@ -72,7 +72,7 @@ export const siteConfig = {
     },
   },
   whatsapp: {
-    phone: '549341753083',
+    phone: '5493413753083',
     message: 'Hola! Quisiera realizar una consulta sobre sus servicios.',
     label: 'Escribinos por WhatsApp',
   },
