@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: 'GV Web & Cloud',
-  tagline: 'Landing pages ultrarrápidas y sitios web con foco en conversión.',
+  tagline: 'Landing pages ultra rápidas y sitios web con foco en conversión.',
   description:
     'Transformo la presencia digital de tu negocio con landing pages modernas, construidas en Astro + Tailwind CSS. Carga instantánea, máxima conversión y cero costos ocultos de mantenimiento.',
   lang: 'es',
@@ -56,7 +56,7 @@ export const siteConfig = {
     title: 'Contacto',
     supporting: 'Envianos tu consulta o pedinos un presupuesto. Respondemos a la brevedad.',
     email: 'german.sfr@gmail.com',
-    phone: '+54 9 341 000-0000',
+    phone: '+54 9 341 753083',
     address: 'Rosario, Santa Fe, Argentina',
     form: {
       accessKey: 'YOUR_WEB3FORMS_ACCESS_KEY',
